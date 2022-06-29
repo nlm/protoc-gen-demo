@@ -1,1 +1,3 @@
-demo/*.go
+/.vscode
+/protoc-gen-demo
+/demo/*.go
