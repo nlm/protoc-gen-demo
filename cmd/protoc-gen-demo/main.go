@@ -1,8 +1,8 @@
 package main
 
 import (
+	"io/ioutil"
 	"log"
-	"os"
 
 	"google.golang.org/protobuf/compiler/protogen"
 )
@@ -30,7 +30,7 @@ func Generate(gen *protogen.Plugin) error {
 }
 
 func main() {
-	log.SetOutput(os.Stderr)
-	//log.SetOutput(ioutil.Discard)
+	//log.SetOutput(os.Stderr)
+	log.SetOutput(ioutil.Discard)
 	protogen.Options{}.Run(Generate)
 }
